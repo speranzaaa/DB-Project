@@ -4,81 +4,86 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import org.jooq.Record1;
+import org.jooq.Record2;
 import org.jooq.Result;
+
+import java.sql.Date;
+import java.time.LocalDate;
 
 public class KarateMasterController {
 
     ControllerUtils controller = new ControllerUtils();
 
     @FXML
-    private DatePicker dateOfBirth;
-
-    @FXML   
-    private ComboBox<String> dojoAddress = new ComboBox<>();
-  
+    private DatePicker dateOfBirth = new DatePicker();
     @FXML
     private ComboBox<String> dojoName = new ComboBox<>();
+    @FXML
+    private ComboBox<String> dojoAddress = new ComboBox<>();
 
     @FXML
     private TextField fiscalCode = new TextField();
 
     @FXML
-    private TextField name;
+    private TextField name = new TextField();
 
-    public DatePicker getDateOfBirth() {
-        return dateOfBirth;
+    public Date getDateOfBirth() {
+        LocalDate selectedDate = dateOfBirth.getValue();
+        Date data = null;
+
+        if (selectedDate != null) {
+            data = Date.valueOf(selectedDate);
+        } else {
+            System.out.println("No date selected");
+        }
+        return data;
     }
 
-    public TextField getFiscalCode() {
-        return fiscalCode;
+    public String getFiscalCode() {
+        return fiscalCode.getText();
     }
 
-    public TextField getName() {
-        return name;
+    public String getName() {
+        return name.getText();
     }
 
-    public TextField getSurname() {
-        return surname;
+    public String getSurname() {
+        return surname.getText();
     }
 
-    public TextField getGender() {
-        return gender;
+    public String getGender() {
+        return gender.getText();
     }
 
     @FXML
-    private TextField surname;
+    private TextField surname = new TextField();
 
     @FXML
-    private TextField gender;
+    private TextField gender = new TextField();
 
     @FXML
     void backToHome(ActionEvent event) { controller.backToHome(event); }
 
     @FXML
-    void insertKarateMasterData(ActionEvent event) {controller.insertKarateMasterData(event);}
+    void insertKarateMasterData(ActionEvent event) {controller.insertKarateMasterData(event, this);}
 
     public void createNamesMenu(Result<Record1<String>> l) {
-        //ObservableList<String> options = FXCollections.observableArrayList("Valore 1", "Valore 2", "Valore 3");
-        //dojoName.setItems(FXCollections.observableArrayList());
-        l.forEach(x -> {
-            dojoName.getItems().add(String.valueOf(x));
-            System.out.println(x);
-            //options.add(x);
-        });
-        //dojoName.setItems(options);
-        //dojoName.getItems().addAll("Valore 1", "Valore 2", "Valore 3");
+        for (Record1<String> r  : l) {
+            dojoName.getItems().add(r.value1());
+        }
     }
-
     public void createAddressesMenu(Result<Record1<String>> l) {
-        //ObservableList<String> options = FXCollections.observableArrayList("Valore 1", "Valore 2", "Valore 3");
-        //dojoName.setItems(FXCollections.observableArrayList());
-        l.forEach(x -> {
-            dojoAddress.getItems().add(String.valueOf(x));
-            System.out.println(x);
-            //options.add(x);
-        });
-        //dojoName.setItems(options);
-        //dojoName.getItems().addAll("Valore 1", "Valore 2", "Valore 3");
+        for (Record1<String> r  : l) {
+            dojoAddress.getItems().add(r.value1());
+        }
     }
 
+
+    public String getDojoName() {
+        return dojoName.getValue();
+    }
+
+    public String getDojoAddress() {
+        return dojoAddress.getValue();
+    }
 }

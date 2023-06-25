@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,6 +12,11 @@
 
 <AnchorPane fx:id="karateMaster" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.karatetrophy.controller.KaratekaController">
    <children>
+      <ImageView fitHeight="150.0" fitWidth="152.0" layoutX="434.0" layoutY="145.0" preserveRatio="true">
+         <image>
+            <Image url="@../images/karate.png" />
+         </image>
+      </ImageView>
       <Text fill="#00ff6a" layoutX="14.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration: Karateka" wrappingWidth="409.7008056640625">
          <font>
             <Font name="Calibri Light" size="30.0" />
@@ -20,27 +24,18 @@
       </Text>
       <TextField fx:id="name" layoutX="23.0" layoutY="102.0" text="Enter your name" />
       <TextField fx:id="surname" layoutX="182.0" layoutY="102.0" text="Enter your surname" />
-      <DatePicker fx:id="dateOfBirth" layoutX="182.0" layoutY="170.0" prefHeight="25.0" prefWidth="149.0" />
-      <Button layoutX="23.0" layoutY="170.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="152.0" style="-fx-background-color: white;" text="Choose your date of birth" />
       <TextField fx:id="fiscalCode" layoutX="339.0" layoutY="102.0" text="Enter your fiscal code" />
       <TextField fx:id="gender" layoutX="23.0" layoutY="136.0" text="Enter your gender" />
       <Text fill="WHITE" layoutX="24.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data of the athlete" />
-      <TextField fx:id="beltColor" layoutX="23.0" layoutY="283.0" prefHeight="25.0" prefWidth="170.0" text="Enter your Belt Color" />
-      <TextField fx:id="danaAcquired" layoutX="24.0" layoutY="314.0" prefHeight="26.0" prefWidth="176.0" text="Enter your Dan (e.g. 0, 1, ...)" />
+      <TextField fx:id="beltColor" layoutX="23.0" layoutY="283.0" prefHeight="26.0" prefWidth="186.0" text="Enter your Belt Color" />
+      <TextField fx:id="danAcquired" layoutX="24.0" layoutY="314.0" prefHeight="26.0" prefWidth="186.0" text="Enter your Dan (e.g. 0, 1, ...)" />
       <Text fill="WHITE" layoutX="24.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tell us more about your Karate history!" />
       <TextField fx:id="weight" layoutX="182.0" layoutY="137.0" text="Enter your weight (es: 60)" />
       <Button layoutX="20.0" layoutY="360.0" mnemonicParsing="false" onAction="#backToHome" text="Back" />
-      <ImageView fitHeight="150.0" fitWidth="152.0" layoutX="399.0" layoutY="145.0" preserveRatio="true">
-         <image>
-            <Image url="@../images/karate.png" />
-         </image>
-      </ImageView>
       <Button layoutX="467.0" layoutY="360.0" mnemonicParsing="false" onAction="#insertKaratekaData" text="Submit Registration" />
-      <MenuButton layoutX="24.0" layoutY="252.0" mnemonicParsing="false" text="Enter your Master's Name">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-      </MenuButton>
+      <ComboBox fx:id="masterName" layoutX="23.0" layoutY="251.0" prefHeight="26.0" prefWidth="186.0" promptText="Enter your Master's FC" />
+      <TextField fx:id="age" layoutX="292.0" layoutY="173.0" prefHeight="26.0" prefWidth="141.0" text="Enter your age (e.g. 21)" />
+      <DatePicker fx:id="dateOfBirth" layoutX="180.0" layoutY="173.0" prefHeight="26.0" prefWidth="105.0" />
+      <Button layoutX="23.0" layoutY="174.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Enter your Birth Date " />
    </children>
 </AnchorPane>

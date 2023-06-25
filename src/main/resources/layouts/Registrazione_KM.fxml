@@ -12,27 +12,27 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.karatetrophy.controller.KarateMasterController">
    <children>
-      <Text fill="#00ff6a" layoutX="14.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration: Karate Master" wrappingWidth="409.7008056640625">
-         <font>
-            <Font name="Calibri Light" size="30.0" />
-         </font>
-      </Text>
-      <TextField fx:id="name" layoutX="24.0" layoutY="115.0" text="Enter your name" />
-      <TextField fx:id="surname" layoutX="24.0" layoutY="158.0" text="Enter your surname" />
-      <DatePicker fx:id="dateOfBirth" layoutX="187.0" layoutY="199.0" />
-      <Button layoutX="23.0" layoutY="199.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Choose your date of birth" />
-      <TextField fx:id="fiscalCode" layoutX="24.0" layoutY="243.0" text="Enter your fiscal code" />
-      <Text fill="WHITE" layoutX="24.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data of the Karate Master" />
-      <Text fill="WHITE" layoutX="23.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karate Dojo" />
       <ImageView fitHeight="196.0" fitWidth="200.0" layoutX="379.0" layoutY="101.0">
          <image>
             <Image url="@../images/karate.png" />
          </image>
       </ImageView>
+      <Text fill="#00ff6a" layoutX="14.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration: Karate Master" wrappingWidth="409.7008056640625">
+         <font>
+            <Font name="Calibri Light" size="30.0" />
+         </font>
+      </Text>
+      <TextField fx:id="name" layoutX="24.0" layoutY="115.0" prefHeight="26.0" prefWidth="155.0" text="Enter your name" />
+      <TextField fx:id="surname" layoutX="198.0" layoutY="115.0" prefHeight="26.0" prefWidth="155.0" text="Enter your surname" />
+      <DatePicker fx:id="dateOfBirth" layoutX="198.0" layoutY="167.0" prefHeight="26.0" prefWidth="155.0" />
+      <Button layoutX="24.0" layoutY="168.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Choose your date of birth " />
+      <TextField fx:id="fiscalCode" layoutX="24.0" layoutY="222.0" prefHeight="26.0" prefWidth="155.0" text="Enter your fiscal code" />
+      <Text fill="WHITE" layoutX="24.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data of the Karate Master" />
+      <Text fill="WHITE" layoutX="23.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karate Dojo" />
       <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#backToHome" text="Back" />
       <Button layoutX="465.0" layoutY="360.0" mnemonicParsing="false" onAction="#insertKarateMasterData" text="Submit Registration" />
-      <TextField fx:id="gender" layoutX="187.0" layoutY="243.0" text="Enter your gender" />
-      <ComboBox fx:id="dojoName" layoutX="23.0" layoutY="310.0" prefWidth="150.0" promptText="Dojo name" />
-      <ComboBox fx:id="dojoAddress" layoutX="185.0" layoutY="310.0" prefWidth="150.0" promptText="Dojo address" />
+      <TextField fx:id="gender" layoutX="198.0" layoutY="222.0" prefHeight="26.0" prefWidth="155.0" text="Enter your gender" />
+      <ComboBox fx:id="dojoName" layoutX="24.0" layoutY="297.0" prefHeight="26.0" prefWidth="155.0" promptText="Dojo Name" />
+      <ComboBox fx:id="dojoAddress" layoutX="198.0" layoutY="297.0" prefHeight="26.0" prefWidth="155.0" promptText="Dojo Address" />
    </children>
 </AnchorPane>

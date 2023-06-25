@@ -8,10 +8,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.jooq.Record1;
+import org.jooq.Record2;
+import org.jooq.Record3;
 import org.jooq.Result;
 
 import java.io.IOException;
-import java.util.List;
+
 
 import static javafx.scene.control.Alert.AlertType.ERROR;
 
@@ -19,8 +21,6 @@ public class HomeController {
 
     private final ControllerUtils controller = new ControllerUtils();
 
-    //@FXML
-    //void openKarateMasterRegistrator(ActionEvent event) {controller.openKarateMasterRegistrator(event);}
 
     @FXML
     void openKarateMasterRegistrator(ActionEvent event) {
@@ -29,12 +29,10 @@ public class HomeController {
             final Parent root = loader.load();
 
             KarateMasterController kmc = loader.getController();
-            Result<Record1<String>> names = controller.KM_BoxElements_Names();
-            Result<Record1<String>> addresses = controller.KM_BoxElements_Addresses();
-            kmc.createNamesMenu(names);
-            kmc.createAddressesMenu(addresses);
-            //List<String> l = controller.getComboBoxElements();
-            //kmc.createNamesMenu(l);
+            Result<Record1<String>> dojo_names = controller.KM_BoxElements_Dojo_N();
+            Result<Record1<String>> dojo_addresses = controller.KM_BoxElements_Dojo_A();
+            kmc.createNamesMenu(dojo_names);
+            kmc.createAddressesMenu(dojo_addresses);
 
             final Stage stage = new Stage();
             stage.setTitle("Karate trophy");
@@ -49,7 +47,27 @@ public class HomeController {
     }
 
     @FXML
-    void openKaratekaRegistrator(ActionEvent event) {controller.openKaratekaRegistrator(event);}
+    void openKaratekaRegistrator(ActionEvent event) {
+        try {
+            final FXMLLoader loader = new FXMLLoader(getClass().getResource("/layouts/Registrazione_K.fxml"));
+            final Parent root = loader.load();
+
+            KaratekaController kc = loader.getController();
+            Result<Record1<String>> names = controller.K_BoxElements();
+            kc.createMastersMenu(names);
+
+            final Stage stage = new Stage();
+            stage.setTitle("Karate trophy");
+            stage.setScene(new Scene(root));
+            stage.show();
+            stage.setResizable(false);
+
+            ((Node) (event.getSource())).getScene().getWindow().hide();
+        } catch (IOException e) {
+            controller.showAlert("unable to open page", ERROR);
+        }
+    }
+
 
     @FXML
     void openRefereeRegistrator(ActionEvent event) {
