@@ -7,7 +7,6 @@ plugins {
     id("nu.studer.jooq") version "8.2"
     id("java")
     id("org.openjfx.javafxplugin") version "0.0.14"
-
 }
 
 repositories {

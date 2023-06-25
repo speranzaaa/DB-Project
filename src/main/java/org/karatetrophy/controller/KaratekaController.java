@@ -4,66 +4,70 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.DatePicker;
-import org.karatetrophy.jooq.tables.Karateka;
+
+import java.time.LocalDate;
 
 public class KaratekaController {
-    private ControllerUtils controller = new ControllerUtils();
 
-    public TextField getBeltcolor() {
-        return beltcolor;
+    private final ControllerUtils controller = new ControllerUtils();
+
+    public String getBeltColor() {
+        return beltColor.getText();
     }
 
-    public TextField getDanacquired() {
-        return danacquired;
+    public String getDanAcquired() {
+        return danAcquired.getText();
     }
 
-    public DatePicker getDateofbirth() {
-        return dateofbirth;
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth.getValue();
     }
 
-    public TextField getDojoname() {
-        return dojoname;
+    public String getGender() {
+        return gender.getText();
     }
 
-    public TextField getFiscalcode() {
-        return fiscalcode;
+    public String getFiscalCode() {
+        return fiscalCode.getText();
     }
 
-    public TextField getMastername() {
-        return mastername;
+    public String getMasterName() {
+        return masterName.getText();
     }
 
-    public TextField getName() {
-        return name;
+    public String getName() {
+        return name.getText();
     }
 
-    public TextField getSurname() {
-        return surname;
+    public String getSurname() {
+        return surname.getText();
     }
 
-    public TextField getWeight() {
-        return weight;
+    public String getWeight() {
+        return weight.getText();
     }
 
-    public int age = 2023 - (getDateofbirth().getValue().getYear());
+    public int getAge() {
+        return (2023 - (getDateOfBirth().getYear()));
+    }
 
     @FXML
-    private TextField beltcolor = new TextField();
+    private TextField beltColor = new TextField();
 
     @FXML
-    private TextField danacquired = new TextField();
+    private TextField danAcquired = new TextField();
 
     @FXML
-    private DatePicker dateofbirth = new DatePicker();
+    private DatePicker dateOfBirth = new DatePicker();
 
     @FXML
-    private TextField dojoname = new TextField();
+    private TextField gender = new TextField();
 
     @FXML
-    private TextField fiscalcode = new TextField();
+    private TextField fiscalCode = new TextField();
 
     @FXML
-    private TextField mastername = new TextField();
+    private TextField masterName = new TextField();
 
     @FXML
     private TextField name= new TextField();
@@ -73,16 +77,14 @@ public class KaratekaController {
 
     @FXML
     private TextField weight = new TextField();
+
     @FXML
     void backToHome(ActionEvent event) {
         controller.backToHome(event);
     }
 
-    @FXML
-    void insertKaratekaData(ActionEvent event) {
-
+    public void insertKaratekaData(ActionEvent event) {
         controller.insertKaratekaData(event);
-
     }
 }
 

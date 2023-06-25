@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -16,13 +17,11 @@
             <Font name="Calibri Light" size="30.0" />
          </font>
       </Text>
-      <TextField layoutX="24.0" layoutY="115.0" text="Enter your name" />
-      <TextField layoutX="24.0" layoutY="158.0" text="Enter your surname" />
-      <DatePicker layoutX="187.0" layoutY="199.0" />
+      <TextField fx:id="name" layoutX="24.0" layoutY="115.0" text="Enter your name" />
+      <TextField fx:id="surname" layoutX="24.0" layoutY="158.0" text="Enter your surname" />
+      <DatePicker fx:id="dateOfBirth" layoutX="187.0" layoutY="199.0" />
       <Button layoutX="23.0" layoutY="199.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Choose your date of birth" />
-      <TextField layoutX="24.0" layoutY="243.0" text="Enter your fiscal code" />
-      <TextField layoutX="24.0" layoutY="309.0" text="Enter your Dojo Name" />
-      <TextField layoutX="182.0" layoutY="309.0" text="Enter your Dojo Address" />
+      <TextField fx:id="fiscalCode" layoutX="24.0" layoutY="243.0" text="Enter your fiscal code" />
       <Text fill="WHITE" layoutX="24.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data of the Karate Master" />
       <Text fill="WHITE" layoutX="23.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karate Dojo" />
       <ImageView fitHeight="196.0" fitWidth="200.0" layoutX="379.0" layoutY="101.0">
@@ -31,6 +30,9 @@
          </image>
       </ImageView>
       <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#backToHome" text="Back" />
-      <Button layoutX="465.0" layoutY="360.0" mnemonicParsing="false" text="Submit Registration" />
+      <Button layoutX="465.0" layoutY="360.0" mnemonicParsing="false" onAction="#insertKarateMasterData" text="Submit Registration" />
+      <TextField fx:id="gender" layoutX="187.0" layoutY="243.0" text="Enter your gender" />
+      <ComboBox fx:id="dojoName" layoutX="23.0" layoutY="310.0" prefWidth="150.0" promptText="Dojo name" />
+      <ComboBox fx:id="dojoAddress" layoutX="185.0" layoutY="310.0" prefWidth="150.0" promptText="Dojo address" />
    </children>
 </AnchorPane>
