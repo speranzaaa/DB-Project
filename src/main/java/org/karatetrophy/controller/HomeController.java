@@ -8,8 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.jooq.Record1;
-import org.jooq.Record2;
-import org.jooq.Record3;
 import org.jooq.Result;
 
 import java.io.IOException;
@@ -81,6 +79,23 @@ public class HomeController {
 
     @FXML
     void openTournamentRegistrator(ActionEvent event) {
-        controller.openTournamentHandler(event);
+        try {
+            final FXMLLoader loader = new FXMLLoader(getClass().getResource("/layouts/Registrazione_Torneo.fxml"));
+            final Parent root = loader.load();
+
+            TournamentController tc = loader.getController();
+            Result<Record1<String>> names = controller.T_BoxElements();
+            tc.createFedMenu(names);
+
+            final Stage stage = new Stage();
+            stage.setTitle("Karate trophy");
+            stage.setScene(new Scene(root));
+            stage.show();
+            stage.setResizable(false);
+
+            ((Node) (event.getSource())).getScene().getWindow().hide();
+        } catch (IOException e) {
+            controller.showAlert("unable to open page", ERROR);
+        }
     }
 }

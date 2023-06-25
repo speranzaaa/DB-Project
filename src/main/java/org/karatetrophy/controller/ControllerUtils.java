@@ -14,10 +14,8 @@ import javafx.stage.Stage;
 import org.jooq.*;
 import org.jooq.Record;
 import org.jooq.impl.DSL;
-import org.karatetrophy.jooq.tables.Dojo;
-import org.karatetrophy.jooq.tables.KarateMaster;
-import org.karatetrophy.jooq.tables.Karateka;
-import org.karatetrophy.jooq.tables.Referee;
+import org.karatetrophy.jooq.tables.*;
+
 import java.sql.*;
 
 
@@ -87,6 +85,25 @@ public final class ControllerUtils {
         return masters;
     }
 
+
+    public Result<Record1<String>> T_BoxElements() {
+        String userName = "root";
+        String password = "t0mn00k@c118";
+        String url = "jdbc:mysql://localhost:3306/karate_trophy";
+        Result<Record1<String>> names = null;
+        try (Connection conn = DriverManager.getConnection(url, userName, password)) {
+            DSLContext create = DSL.using(conn, SQLDialect.MYSQL);
+
+            Table<? extends Record> F = new Federation();
+
+            ResultQuery<Record1<String>> add_query = create.select(field("Name", String.class)).from(F);
+            names = add_query.fetch();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return names;
+    }
+
     public void openStats(final Event event) { changePage(event, "/layouts/Stats1.fxml");}
 
     public void backToHome(final Event event) {changePage(event, "/layouts/Home.fxml");}
@@ -138,8 +155,7 @@ public final class ControllerUtils {
         changePage(event, "/layouts/Registrazione_Completata.fxml");
     }
 
-    public void insertRefereeData(final Event event) {
-        RefereeController referee_data = new RefereeController();
+    public void insertRefereeData(final Event event, RefereeController referee_data) {
         String userName = "root";
         String password = "t0mn00k@c118";
         String url = "jdbc:mysql://localhost:3306/karate_trophy";
@@ -160,8 +176,7 @@ public final class ControllerUtils {
     }
 
 
-    public void insertTournamentData(ActionEvent event) {
-        TournamentController tournament_data = new TournamentController();
+    public void insertTournamentData(ActionEvent event, TournamentController tournament_data) {
         String userName = "root";
         String password = "t0mn00k@c118";
         String url = "jdbc:mysql://localhost:3306/karate_trophy";
@@ -170,10 +185,8 @@ public final class ControllerUtils {
             DSLContext create = DSL.using(conn, SQLDialect.MYSQL);
 
             Table<? extends Record> Tournament = new org.karatetrophy.jooq.tables.Tournament();
-            create.insertInto(Tournament, field("Name"), field("City"), field("Start_Date"), field("End_Date"),
-                    field("Federation"))
-                    .values(tournament_data.getName(), tournament_data.getCity(), tournament_data.getStartDate(),
-                            tournament_data.getEndDate(), tournament_data.getFederation())
+            create.insertInto(Tournament, field("Name"), field("City"), field("Start_date"), field("End_Date"), field("Federation_Name"), field("Importance"), field("Winner"))
+                    .values(tournament_data.getName(), tournament_data.getCity(), tournament_data.getStartDate(), tournament_data.getEndDate(), tournament_data.getFederation().getValue(), tournament_data.getImportance(), tournament_data.getWinners())
                     .execute();
         } catch (Exception e) {
             e.printStackTrace();
