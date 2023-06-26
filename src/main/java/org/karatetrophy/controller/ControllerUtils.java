@@ -22,8 +22,85 @@ import java.sql.*;
 import static org.jooq.impl.DSL.field;
 
 import java.io.IOException;
+import java.util.List;
 
 public final class ControllerUtils {
+
+    public Result<Record> getKM_info() {
+        String userName = "root";
+        String password = "t0mn00k@c118";
+        String url = "jdbc:mysql://localhost:3306/karate_trophy";
+        Result<Record> result = null;
+        try (Connection conn = DriverManager.getConnection(url, userName, password)) {
+            DSLContext create = DSL.using(conn, SQLDialect.MYSQL);
+
+            Table<? extends Record> KM = new KarateMaster();
+            SelectQuery<Record> selectQuery = create.selectQuery();
+            selectQuery.addFrom(KM);
+            result = selectQuery.fetch();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    };
+
+    public Result<Record> getK_info() {
+        String userName = "root";
+        String password = "t0mn00k@c118";
+        String url = "jdbc:mysql://localhost:3306/karate_trophy";
+        Result<Record> result = null;
+        try (Connection conn = DriverManager.getConnection(url, userName, password)) {
+            DSLContext create = DSL.using(conn, SQLDialect.MYSQL);
+
+            Table<? extends Record> K = new Karateka();
+            SelectQuery<Record> selectQuery = create.selectQuery();
+            selectQuery.addFrom(K);
+            result = selectQuery.fetch();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public Result<Record> getR_info() {
+        String userName = "root";
+        String password = "t0mn00k@c118";
+        String url = "jdbc:mysql://localhost:3306/karate_trophy";
+        Result<Record> result = null;
+        try (Connection conn = DriverManager.getConnection(url, userName, password)) {
+            DSLContext create = DSL.using(conn, SQLDialect.MYSQL);
+
+            Table<? extends Record> R = new Referee();
+            SelectQuery<Record> selectQuery = create.selectQuery();
+            selectQuery.addFrom(R);
+            result = selectQuery.fetch();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public Result<Record> getT_info() {
+        String userName = "root";
+        String password = "t0mn00k@c118";
+        String url = "jdbc:mysql://localhost:3306/karate_trophy";
+        Result<Record> result = null;
+        try (Connection conn = DriverManager.getConnection(url, userName, password)) {
+            DSLContext create = DSL.using(conn, SQLDialect.MYSQL);
+
+            Table<? extends Record> T = new Tournament();
+            SelectQuery<Record> selectQuery = create.selectQuery();
+            selectQuery.addFrom(T);
+            result = selectQuery.fetch();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
 
     public void openRefereeRegistrator(final Event event) { changePage(event, "/layouts/Registrazione_R.fxml");}
 
@@ -104,15 +181,9 @@ public final class ControllerUtils {
         return names;
     }
 
-    public void openStats(final Event event) { changePage(event, "/layouts/Stats1.fxml");}
-
     public void backToHome(final Event event) {changePage(event, "/layouts/Home.fxml");}
 
-    public void openTournamentHandler(final Event event) {changePage(event, "/layouts/Registrazione_Torneo.fxml");}
-
     /*#####################################################################################################################################################################################################################*/
-
-
 
     public void insertKaratekaData(final Event event, KaratekaController karateka_data) {
         String userName = "root";
@@ -233,5 +304,22 @@ public final class ControllerUtils {
         stage.show();
         stage.setResizable(false);
         ((Node) (event.getSource())).getScene().getWindow().hide();
+    }
+    /*#####################################################################################################################################################################################################################*/
+
+    public void openKMStats(ActionEvent event) {
+        changePage(event, "/layouts/KMStats.fxml");
+    }
+
+    public void openKStats(ActionEvent event) {
+        changePage(event, "/layouts/KStats.fxml");
+    }
+
+    public void openRStats(ActionEvent event) {
+        changePage(event, "/layouts/RStats.fxml");
+    }
+
+    public void openTStats(ActionEvent event) {
+        changePage(event, "/layouts/TStats.fxml");
     }
 }

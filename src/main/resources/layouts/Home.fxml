@@ -16,7 +16,7 @@
       </Text>
       <Text fill="WHITE" layoutX="24.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome! What would you like to do today?" />
       <Button alignment="BASELINE_LEFT" layoutX="24.0" layoutY="213.0" mnemonicParsing="false" onAction="#openTournamentRegistrator" prefHeight="59.0" prefWidth="546.0" text="Register a new Tournament" />
-      <Button alignment="BASELINE_LEFT" layoutX="24.0" layoutY="297.0" mnemonicParsing="false" onAction="#openStats" prefHeight="59.0" prefWidth="546.0" text="Discover some stats about existing tournaments" />
+      <Button alignment="BASELINE_LEFT" layoutX="24.0" layoutY="297.0" mnemonicParsing="false" onAction="#openStats" prefHeight="59.0" prefWidth="546.0" text="Check the entries already present" />
       <ImageView fitHeight="108.0" fitWidth="105.0" layoutX="465.0" layoutY="6.0" preserveRatio="true">
          <image>
             <Image url="@../images/karate.png" />

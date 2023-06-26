@@ -72,10 +72,6 @@ public class HomeController {
         controller.openRefereeRegistrator(event);
     }
 
-    @FXML
-    void openStats(ActionEvent event) {
-        controller.openStats(event);
-    }
 
     @FXML
     void openTournamentRegistrator(ActionEvent event) {
@@ -86,6 +82,23 @@ public class HomeController {
             TournamentController tc = loader.getController();
             Result<Record1<String>> names = controller.T_BoxElements();
             tc.createFedMenu(names);
+
+            final Stage stage = new Stage();
+            stage.setTitle("Karate trophy");
+            stage.setScene(new Scene(root));
+            stage.show();
+            stage.setResizable(false);
+
+            ((Node) (event.getSource())).getScene().getWindow().hide();
+        } catch (IOException e) {
+            controller.showAlert("unable to open page", ERROR);
+        }
+    }
+
+    public void openStats(ActionEvent event) {
+        try {
+            final FXMLLoader loader = new FXMLLoader(getClass().getResource("/layouts/Stats.fxml"));
+            final Parent root = loader.load();
 
             final Stage stage = new Stage();
             stage.setTitle("Karate trophy");
