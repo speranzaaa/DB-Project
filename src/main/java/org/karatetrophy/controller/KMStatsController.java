@@ -1,12 +1,7 @@
 package org.karatetrophy.controller;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
-import javafx.scene.control.TableView;
 import javafx.scene.text.Text;
 import org.jooq.Record;
 import org.jooq.Result;

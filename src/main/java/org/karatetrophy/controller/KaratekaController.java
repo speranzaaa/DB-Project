@@ -6,7 +6,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import org.jooq.Record1;
-import org.jooq.Record3;
 import org.jooq.Result;
 
 import java.sql.Date;

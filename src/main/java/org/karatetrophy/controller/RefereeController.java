@@ -8,7 +8,6 @@ import javafx.scene.control.TextField;
 import java.sql.Date;
 import java.time.LocalDate;
 
-
 public class RefereeController {
     private ControllerUtils controller = new ControllerUtils();
 

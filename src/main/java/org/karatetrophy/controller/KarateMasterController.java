@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import org.jooq.Record1;
-import org.jooq.Record2;
 import org.jooq.Result;
 
 import java.sql.Date;
@@ -77,7 +76,6 @@ public class KarateMasterController {
             dojoAddress.getItems().add(r.value1());
         }
     }
-
 
     public String getDojoName() {
         return dojoName.getValue();
