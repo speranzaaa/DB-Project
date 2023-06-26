@@ -9,21 +9,24 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.karatetrophy.controller.HomeController">
    <children>
-      <Text fill="#00ff6a" layoutX="95.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karate Trophy" textAlignment="CENTER" wrappingWidth="409.7008056640625">
+      <Text fill="#00ff6a" layoutX="95.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karate Trophy" textAlignment="CENTER" wrappingWidth="409.7008056640625">
          <font>
-            <Font name="Calibri Light" size="30.0" />
+            <Font name="Calibri Light Italic" size="47.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="24.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome! What would you like to do today?" />
-      <Button alignment="BASELINE_LEFT" layoutX="24.0" layoutY="213.0" mnemonicParsing="false" onAction="#openTournamentRegistrator" prefHeight="59.0" prefWidth="546.0" text="Register a new Tournament" />
-      <Button alignment="BASELINE_LEFT" layoutX="24.0" layoutY="297.0" mnemonicParsing="false" onAction="#openStats" prefHeight="59.0" prefWidth="546.0" text="Check the entries already present" />
+      <Text fill="WHITE" layoutX="24.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome! What would you like to do today?">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <Button alignment="BASELINE_LEFT" layoutX="24.0" layoutY="213.0" mnemonicParsing="false" onAction="#openTournamentRegistrator" prefHeight="59.0" prefWidth="546.0" style="-fx-background-color: #ffff66;" text="Register a new Tournament" />
+      <Button alignment="BASELINE_LEFT" layoutX="24.0" layoutY="297.0" mnemonicParsing="false" onAction="#openStats" prefHeight="59.0" prefWidth="546.0" style="-fx-background-color: #ffff66;" text="Check the entries already present" />
       <ImageView fitHeight="108.0" fitWidth="105.0" layoutX="465.0" layoutY="6.0" preserveRatio="true">
          <image>
             <Image url="@../images/karate.png" />
          </image>
       </ImageView>
-      <Button layoutX="24.0" layoutY="134.0" mnemonicParsing="false" onAction="#openKaratekaRegistrator" prefHeight="59.0" prefWidth="183.0" text="Register a new Karateka" />
-      <Button layoutX="426.0" layoutY="134.0" mnemonicParsing="false" onAction="#openRefereeRegistrator" prefHeight="59.0" prefWidth="143.0" text="Register a new Referee" />
-      <Button layoutX="225.0" layoutY="134.0" mnemonicParsing="false" onAction="#openKarateMasterRegistrator" prefHeight="59.0" prefWidth="183.0" text="Register a new Karate Master" />
+      <Button layoutX="24.0" layoutY="134.0" mnemonicParsing="false" onAction="#openKaratekaRegistrator" prefHeight="59.0" prefWidth="183.0" style="-fx-background-color: #ffff66;" text="Register a new Karateka" />
+      <Button layoutX="426.0" layoutY="134.0" mnemonicParsing="false" onAction="#openRefereeRegistrator" prefHeight="59.0" prefWidth="143.0" style="-fx-background-color: #ffff66;" text="Register a new Referee" />
+      <Button layoutX="225.0" layoutY="134.0" mnemonicParsing="false" onAction="#openKarateMasterRegistrator" prefHeight="59.0" prefWidth="183.0" style="-fx-background-color: #ffff66;" text="Register a new Karate Master" />
    </children>
 </AnchorPane>

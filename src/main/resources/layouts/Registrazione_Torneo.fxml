@@ -17,21 +17,21 @@
             <Font size="34.0" />
          </font>
       </Text>
-      <DatePicker fx:id="endDate" layoutX="170.0" layoutY="168.0" />
-      <DatePicker fx:id="startDate" layoutX="170.0" layoutY="128.0" />
-      <TextField fx:id="name" layoutX="39.0" layoutY="86.0" prefHeight="26.0" prefWidth="219.0" text="Enter the Name of The Tournament" />
-      <Button layoutX="39.0" layoutY="128.0" mnemonicParsing="false" text="Choose a Start Date" />
-      <Button layoutX="39.0" layoutY="168.0" mnemonicParsing="false" text="Choose an End Date" />
-      <TextField fx:id="city" layoutX="39.0" layoutY="211.0" prefHeight="26.0" prefWidth="307.0" text="Enter the City where the tournament will be held" />
+      <DatePicker fx:id="endDate" layoutX="170.0" layoutY="168.0" style="-fx-background-color: #ffff66;" />
+      <DatePicker fx:id="startDate" layoutX="170.0" layoutY="128.0" style="-fx-background-color: #ffff66;" />
+      <TextField fx:id="name" layoutX="39.0" layoutY="86.0" prefHeight="26.0" prefWidth="219.0" style="-fx-background-color: #ffff66;" text="Enter the Name of The Tournament" />
+      <Button layoutX="39.0" layoutY="128.0" mnemonicParsing="false" style="-fx-background-color: #ffff66;" text="Choose a Start Date" />
+      <Button layoutX="39.0" layoutY="168.0" mnemonicParsing="false" style="-fx-background-color: #ffff66;" text="Choose an End Date" />
+      <TextField fx:id="city" layoutX="39.0" layoutY="211.0" prefHeight="26.0" prefWidth="307.0" style="-fx-background-color: #ffff66;" text="Enter the City where the tournament will be held" />
       <ImageView fitHeight="196.0" fitWidth="200.0" layoutX="382.0" layoutY="128.0">
          <image>
             <Image url="@../images/karate.png" />
          </image>
       </ImageView>
-      <Button layoutX="18.0" layoutY="360.0" mnemonicParsing="false" onAction="#backToHome" text="Back" />
-      <Button layoutX="465.0" layoutY="360.0" mnemonicParsing="false" onAction="#insertTournamentData" text="Submit Registration" />
-      <ComboBox fx:id="federation" layoutX="275.0" layoutY="86.0" prefHeight="26.0" prefWidth="307.0" promptText="What Federation are you associated with?" />
-      <TextField fx:id="importance" layoutX="39.0" layoutY="253.0" prefHeight="26.0" prefWidth="307.0" text="Importance (e.g. National, International, Regional, ...)" />
-      <TextField fx:id="winners" layoutX="39.0" layoutY="297.0" prefHeight="26.0" prefWidth="307.0" text="Enter how many medals will be needed (e.g. 150)" />
+      <Button layoutX="18.0" layoutY="360.0" mnemonicParsing="false" onAction="#backToHome" style="-fx-background-color: #ffff66;" text="Back" />
+      <Button layoutX="465.0" layoutY="360.0" mnemonicParsing="false" onAction="#insertTournamentData" style="-fx-background-color: #ffff66;" text="Submit Registration" />
+      <ComboBox fx:id="federation" layoutX="275.0" layoutY="86.0" prefHeight="26.0" prefWidth="307.0" promptText="What Federation are you associated with?" style="-fx-background-color: #ffff66;" />
+      <TextField fx:id="importance" layoutX="39.0" layoutY="253.0" prefHeight="26.0" prefWidth="307.0" style="-fx-background-color: #ffff66;" text="Importance (e.g. National, International, Regional, ...)" />
+      <TextField fx:id="winners" layoutX="39.0" layoutY="297.0" prefHeight="26.0" prefWidth="307.0" style="-fx-background-color: #ffff66;" text="Enter how many medals will be needed (e.g. 150)" />
    </children>
 </AnchorPane>

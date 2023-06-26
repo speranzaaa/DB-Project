@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.karatetrophy.controller.KaratekaController">
    <children>
-      <Text fill="WHITE" layoutX="233.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrazione completata" />
+      <Text fill="LIME" layoutX="14.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your registration is complete! To confirm your registration, check it in the appropriate section" textAlignment="CENTER" wrappingWidth="569.268310546875">
+         <font>
+            <Font size="26.0" />
+         </font></Text>
+      <Button layoutX="15.0" layoutY="349.0" mnemonicParsing="false" onAction="#backToHome" style="-fx-background-color: #ffff66;" text="Back" />
+      <Text fill="LIME" layoutX="14.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank you!" textAlignment="CENTER" wrappingWidth="569.268310546875">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="158.0" fitWidth="156.0" layoutX="222.0" layoutY="231.0" preserveRatio="true">
+         <image>
+            <Image url="@../images/karate.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

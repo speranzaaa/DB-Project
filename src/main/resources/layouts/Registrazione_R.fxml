@@ -11,24 +11,24 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.karatetrophy.controller.RefereeController">
    <children>
-      <Text fill="#00ff6a" layoutX="14.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration: Referee" wrappingWidth="409.7008056640625">
+      <Text fill="#00ff6a" layoutX="24.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration: Referee" wrappingWidth="409.7008056640625">
          <font>
-            <Font name="Calibri Light" size="30.0" />
+            <Font name="Calibri Light" size="36.0" />
          </font>
       </Text>
-      <TextField fx:id="name" layoutX="24.0" layoutY="115.0" text="Enter your name" />
-      <TextField fx:id="surname" layoutX="24.0" layoutY="158.0" text="Enter your surname" />
-      <DatePicker fx:id="dateOfBirth" layoutX="187.0" layoutY="199.0" />
-      <Button layoutX="23.0" layoutY="199.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Choose your date of birth" />
-      <TextField fx:id="fiscalCode" layoutX="24.0" layoutY="243.0" text="Enter your fiscal code" />
-      <Text fill="WHITE" layoutX="24.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data of the Referee" />
+      <TextField fx:id="name" layoutX="24.0" layoutY="115.0" style="-fx-background-color: #ffff66;" text="Enter your name" />
+      <TextField fx:id="surname" layoutX="24.0" layoutY="158.0" style="-fx-background-color: #ffff66;" text="Enter your surname" />
+      <DatePicker fx:id="dateOfBirth" layoutX="187.0" layoutY="199.0" style="-fx-background-color: #ffff66;" />
+      <Button layoutX="23.0" layoutY="199.0" mnemonicParsing="false" style="-fx-background-color: #ffff66;" text="Choose your date of birth" />
+      <TextField fx:id="fiscalCode" layoutX="24.0" layoutY="243.0" style="-fx-background-color: #ffff66;" text="Enter your fiscal code" />
+      <Text fill="WHITE" layoutX="26.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data of the Referee" />
       <ImageView fitHeight="196.0" fitWidth="200.0" layoutX="377.0" layoutY="102.0">
          <image>
             <Image url="@../images/karate.png" />
          </image>
       </ImageView>
-      <Button layoutX="24.0" layoutY="350.0" mnemonicParsing="false" onAction="#backToHome" text="Back" />
-      <Button layoutX="465.0" layoutY="350.0" mnemonicParsing="false" onAction="#insertRefereeData" text="Submit Registration" />
-      <TextField fx:id="gender" layoutX="24.0" layoutY="285.0" text="Enter your gender" />
+      <Button layoutX="24.0" layoutY="350.0" mnemonicParsing="false" onAction="#backToHome" style="-fx-background-color: #ffff66;" text="Back" />
+      <Button layoutX="465.0" layoutY="350.0" mnemonicParsing="false" onAction="#insertRefereeData" style="-fx-background-color: #ffff66;" text="Submit Registration" />
+      <TextField fx:id="gender" layoutX="24.0" layoutY="285.0" style="-fx-background-color: #ffff66;" text="Enter your gender" />
    </children>
 </AnchorPane>

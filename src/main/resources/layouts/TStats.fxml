@@ -12,7 +12,7 @@
             <Font size="34.0" />
          </font>
       </Text>
-      <Button layoutX="19.0" layoutY="535.0" mnemonicParsing="false" onAction="#backToHome" text="Back" />
+      <Button layoutX="19.0" layoutY="535.0" mnemonicParsing="false" onAction="#backToHome" style="-fx-background-color: #ffff66;" text="Back" />
       <Text fx:id="T" fill="WHITE" layoutX="6.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="882.9366455078125" />
    </children>
 </AnchorPane>

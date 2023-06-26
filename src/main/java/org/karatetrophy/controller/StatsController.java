@@ -50,7 +50,7 @@ public class StatsController {
                 final FXMLLoader loader = new FXMLLoader(getClass().getResource("/layouts/KStats.fxml"));
                 final Parent root = loader.load();
 
-                KStatsController k = new KStatsController();
+                KStatsController k = loader.getController();
                 Result<Record> k_info = controller.getK_info();
                 k.createTable(k_info);
 
@@ -72,7 +72,7 @@ public class StatsController {
                 final FXMLLoader loader = new FXMLLoader(getClass().getResource("/layouts/RStats.fxml"));
                 final Parent root = loader.load();
 
-                RStatsController r =  new RStatsController();
+                RStatsController r = loader.getController();
                 Result<Record> r_info = controller.getR_info();
                 r.createTable(r_info);
 
@@ -94,7 +94,7 @@ public class StatsController {
                 final FXMLLoader loader = new FXMLLoader(getClass().getResource("/layouts/TStats.fxml"));
                 final Parent root = loader.load();
 
-                TStatsController t =  new TStatsController();
+                TStatsController t = loader.getController();
                 Result<Record> t_info = controller.getT_info();
                 t.createTable(t_info);
 

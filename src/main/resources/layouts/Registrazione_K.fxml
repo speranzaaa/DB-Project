@@ -17,25 +17,25 @@
             <Image url="@../images/karate.png" />
          </image>
       </ImageView>
-      <Text fill="#00ff6a" layoutX="14.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration: Karateka" wrappingWidth="409.7008056640625">
+      <Text fill="#00ff6a" layoutX="25.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration: Karateka" wrappingWidth="409.7008056640625">
          <font>
-            <Font name="Calibri Light" size="30.0" />
+            <Font name="Calibri Light" size="36.0" />
          </font>
       </Text>
-      <TextField fx:id="name" layoutX="23.0" layoutY="102.0" text="Enter your name" />
-      <TextField fx:id="surname" layoutX="182.0" layoutY="102.0" text="Enter your surname" />
-      <TextField fx:id="fiscalCode" layoutX="339.0" layoutY="102.0" text="Enter your fiscal code" />
-      <TextField fx:id="gender" layoutX="23.0" layoutY="136.0" text="Enter your gender" />
+      <TextField fx:id="name" layoutX="23.0" layoutY="102.0" style="-fx-background-color: #ffff66;" text="Enter your name" />
+      <TextField fx:id="surname" layoutX="182.0" layoutY="102.0" style="-fx-background-color: #ffff66;" text="Enter your surname" />
+      <TextField fx:id="fiscalCode" layoutX="339.0" layoutY="102.0" style="-fx-background-color: #ffff66;" text="Enter your fiscal code" />
+      <TextField fx:id="gender" layoutX="23.0" layoutY="136.0" style="-fx-background-color: #ffff66;" text="Enter your gender" />
       <Text fill="WHITE" layoutX="24.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data of the athlete" />
-      <TextField fx:id="beltColor" layoutX="23.0" layoutY="283.0" prefHeight="26.0" prefWidth="186.0" text="Enter your Belt Color" />
-      <TextField fx:id="danAcquired" layoutX="24.0" layoutY="314.0" prefHeight="26.0" prefWidth="186.0" text="Enter your Dan (e.g. 0, 1, ...)" />
-      <Text fill="WHITE" layoutX="24.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tell us more about your Karate history!" />
-      <TextField fx:id="weight" layoutX="182.0" layoutY="137.0" text="Enter your weight (es: 60)" />
-      <Button layoutX="20.0" layoutY="360.0" mnemonicParsing="false" onAction="#backToHome" text="Back" />
-      <Button layoutX="467.0" layoutY="360.0" mnemonicParsing="false" onAction="#insertKaratekaData" text="Submit Registration" />
-      <ComboBox fx:id="masterName" layoutX="23.0" layoutY="251.0" prefHeight="26.0" prefWidth="186.0" promptText="Enter your Master's FC" />
-      <TextField fx:id="age" layoutX="292.0" layoutY="173.0" prefHeight="26.0" prefWidth="141.0" text="Enter your age (e.g. 21)" />
-      <DatePicker fx:id="dateOfBirth" layoutX="180.0" layoutY="173.0" prefHeight="26.0" prefWidth="105.0" />
-      <Button layoutX="23.0" layoutY="174.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Enter your Birth Date " />
+      <TextField fx:id="beltColor" layoutX="23.0" layoutY="283.0" prefHeight="26.0" prefWidth="186.0" style="-fx-background-color: #ffff66;" text="Enter your Belt Color" />
+      <TextField fx:id="danAcquired" layoutX="23.0" layoutY="314.0" prefHeight="26.0" prefWidth="186.0" style="-fx-background-color: #ffff66;" text="Enter your Dan (e.g. 0, 1, ...)" />
+      <Text fill="WHITE" layoutX="24.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tell us more about your Karate history!" />
+      <TextField fx:id="weight" layoutX="182.0" layoutY="137.0" style="-fx-background-color: #ffff66;" text="Enter your weight (es: 60)" />
+      <Button layoutX="20.0" layoutY="360.0" mnemonicParsing="false" onAction="#backToHome" style="-fx-background-color: #ffff66;" text="Back" />
+      <Button layoutX="467.0" layoutY="360.0" mnemonicParsing="false" onAction="#insertKaratekaData" style="-fx-background-color: #ffff66;" text="Submit Registration" />
+      <ComboBox fx:id="masterName" layoutX="23.0" layoutY="251.0" prefHeight="26.0" prefWidth="186.0" promptText="Enter your Master's FC" style="-fx-background-color: #ffff66;" />
+      <TextField fx:id="age" layoutX="292.0" layoutY="173.0" prefHeight="26.0" prefWidth="141.0" style="-fx-background-color: #ffff66;" text="Enter your age (e.g. 21)" />
+      <DatePicker fx:id="dateOfBirth" layoutX="180.0" layoutY="173.0" prefHeight="26.0" prefWidth="105.0" style="-fx-background-color: #ffff66;" />
+      <Button layoutX="23.0" layoutY="174.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #ffff66;" text="Enter your Birth Date " />
    </children>
 </AnchorPane>

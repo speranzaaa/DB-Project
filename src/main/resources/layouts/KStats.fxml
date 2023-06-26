@@ -7,12 +7,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.karatetrophy.controller.KStatsController">
    <children>
-      <Text fill="#00ff33" layoutX="19.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karateka">
+      <Text fill="#00ff33" layoutX="24.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karateka">
          <font>
             <Font size="34.0" />
          </font>
       </Text>
-      <Button layoutX="19.0" layoutY="535.0" mnemonicParsing="false" onAction="#backToHome" text="Back" />
-      <Text fx:id="K" fill="WHITE" layoutX="6.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="882.9366455078125" />
+      <Button layoutX="19.0" layoutY="535.0" mnemonicParsing="false" onAction="#backToHome" style="-fx-background-color: #ffff66;" text="Back" />
+      <Text fx:id="K" fill="WHITE" layoutX="6.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="882.9366455078125" />
    </children>
 </AnchorPane>

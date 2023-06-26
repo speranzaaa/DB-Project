@@ -14,9 +14,6 @@ import org.jooq.Result;
 public class KStatsController {
     ControllerUtils controller = new ControllerUtils();
 
-    //@FXML
-    //private TableView<String> KM = new TableView<>();
-
     @FXML
     private Text K = new Text();
     @FXML
@@ -26,9 +23,6 @@ public class KStatsController {
 
     public void createTable(Result<Record> kInfo) {
         System.out.println(kInfo);
-            /*TableRow<Record> row = new TableRow<>();
-            row.setItem(r);
-            KM.getItems().add(row.getItem().toString()); */
         K.setText(kInfo.toString());
     }
 }
